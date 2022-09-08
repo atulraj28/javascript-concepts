@@ -1,0 +1,19 @@
+FIRST
+script is not needed if used in .js file but it must be conected. To connect use <script src="path"></script>.
+if you want to run the script before body then put the script in the head and if later in then put it in the body.
+
+DAY1
+if we use external javascript then it is comparatively faster for the web to executite the operationn and it is also 
+because javascript is saved in chases to compile it even faster 
+"async" is an attribute used in the connection script in the external js it download parralely and exicute it after downlod
+it is the same function which is done by default so it is not usually needed
+"defer" is another attribute used inthe connnection script which first read the whole html and then download the script 
+which is sometimes can give error while compiling.
+"document.getElementById("idname").innerHTML="anythig that the user want to say"; this method also can show message of the tag 
+which has the idname.
+"document.write("aything that you want to writ"); it does not work with defer.
+"console.log("anyhting you want to print in the console"); it only write in console.
+
+DAY2(js02)
+comments--
+
