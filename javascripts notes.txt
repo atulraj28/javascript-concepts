@@ -17,3 +17,8 @@ which has the idname.
 DAY2(js02)
 comments--
 
+day3(js3)
+variables  var is used for varable declaration to use variable quation is not used for calling
+
+day4(js4)
+operatofs 
