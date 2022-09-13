@@ -1,4 +1,4 @@
-FIRST
+    FIRST
 script is not needed if used in .js file but it must be conected. To connect use <script src="path"></script>.
 if you want to run the script before body then put the script in the head and if later in then put it in the body.
 
@@ -22,3 +22,51 @@ variables  var is used for varable declaration to use variable quation is not us
 
 day4(js4)
 operatofs 
+ 
+day5(js4)
+datatype
+we can use both single and double quates to define any data type it has no difference
+
+day6
+oprators
+=== first check the datatype then chek the value 
+
+ day7
+if-else 
+switch
+
+day 8
+loop
+
+breake continue and nested loop 
+
+alert,confirm and prompt;   and conversion of different datatype;
+
+
+
+STRING MANIPULATION (JS7)
+\ this is called backslsh used to escape special charecter inside double and single quoted area
+
+ console.log(varname.length); it is used to fetch the legth of string
+ console.log(varname[variableindex]); it is used ot fech the charecter at particular index
+
+
+   ARRAY(JS8)
+
+
+
+FUNCTION(JS9)
+argument objects
+retun in funtion 
+local and global funtion
+
+
+
+
+
+
+
+
+
+
+
