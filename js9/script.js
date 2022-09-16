@@ -92,5 +92,31 @@ function additionadd(){
     let result=33;//local variable
     console.log(result);
 }
+function sub(){
+  let result=50;//local variable
+  console.log(result);
+}
 
 additionadd();
+sub();
+
+
+
+//anonymous function
+ //this function is a function without name but it has to be stored in a variable or should be used as an argument like--
+ // there is no name of the below function 
+ let store = function(){
+  console.log("atul");
+ }
+ store();
+
+ 
+
+ //immediatley invocked function
+
+ (function(){
+  console.log("hello world");
+  alert("hello world");
+ })();
+ //above is the way to use immediatly invocked function it is like annonymous fuction and to use it we just put it in parenthesis and put a parenthesis after it then put semicolon this will invocke the functin immediatly
+ 

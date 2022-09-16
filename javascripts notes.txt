@@ -59,6 +59,62 @@ FUNCTION(JS9)
 argument objects
 retun in funtion 
 local and global funtion
+anonymous function!
+immediatelly invoked function// it can be used when using code of different people
+
+
+OBJECT(JS10)
+properties of object
+method in object
+use of "this" function in object
+math object
+date objects
+NEW keyword
+getter and setter
+object constructor
+nested object
+hoisting
+
+
+
+DOM(DOCUMENT OBJECT MODEL)
+it is kind of application programming interface(api)for manipulatig html and xml document
+different selector 
+getelementbyid
+getelementbyclassname
+getelementbytagname
+query selector
+transversing element
+append element
+insert before
+remove child element
+clone element
+replace element
+insert adjacent html
+
+
+
+
+////// PART 2//////
+
+
+*CHANGE ATTRIBUTE
+ check ,set ,get ,remove
+
+*inline style
+ how to check which styles are currently working for specific element
+
+*css classes
+ add class 
+ remove class
+ check whether some class is present or not
+ tggole the class means add class dim if not or will remove class dim if it is there
+
+*width and height of an element 
+ how to know the height and width
+
+*do
+
 
 
 

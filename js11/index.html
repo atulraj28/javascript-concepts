@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document object model</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li class="cl">list 1</li>
+      <li id="first">list 2</li>
+      <li class="cl">list 3</li>
+    </ul>
+    <h2 class="intro">heding1</h2>
+    <div class="div1">
+      <p class="intro">paragraph1</p>
+      <h2 class="into">heading2</h2>
+      <p>paragraph2</p>
+      <h2>heading3</h2>
+      <p class="intro">paragraph3</p>
+      <di id="intro">
+        <p>hello this is a p tag</p>
+      </di>
+
+    </div>
+    <ul id="list">
+        <li>lists 1</li>
+        <li>lists 2</li>
+        <li>lists 3</li>
+        <li>lists 4</li>
+      </ul>
+      <ul id="menu">
+        <li>Home</li>
+        <li>product</li>
+        <li>about us</li>
+      </ul>
+
+    <script>
+      let elem = document.getElementById("first"); // selecting via id
+      console.log(elem);
+      console.log(elem.innerHTML);
+      elem.innerHTML = "<p> helo</p>";
+
+      let elm = document.getElementsByClassName("cl"); //selecting via class name
+      console.log(elm.length);
+
+      for (let i = 0; i < elm.length; i++) {
+        elm[i].innerHTML = "<p> hello</p>";
+      }
+
+      // selecting via tag name
+
+      let elements = document.getElementsByTagName("h2");
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].innerHTML = "Hello there";
+      }
+
+      //query selector
+
+      let elems=document.querySelectorAll("p.intro");
+      for(i=0;i<elems.length;i++)
+      {
+        elems[i].innerHTML="helloss";
+      }
+      console.log(elems);
+
+
+      //traversing elements
+      
+
+      // append 
+
+      let eleme = document.getElementById("intro");
+      let h1 = document.createElement('h1');
+      h1.className="try pi";
+      h1.id= "intro11";
+      let text= document.createTextNode("this is h1 tag");
+      h1.appendChild(text);
+      eleme.appendChild(h1);
+
+
+      let list1=document.getElementById("list");
+
+      let item =document.createElement("li");
+
+      item.textContent="new list 5";
+
+    //   list1.appendChild(item);
+
+      //insert before function it will insert element before any other element
+
+      let pos=list1.firstElementChild.nextElementSibling.nextElementSibling;
+      
+      list1.insertBefore(item,pos);
+
+      let parent1 =document.body;
+      let elmen =document.createElement("h2");
+      elmen.textContent="this is new element";
+      let list6 = document.getElementById("list");
+      parent1.insertBefore(elmen,list6);
+
+
+      //remove child element
+     
+      let parent22 =document.getElementById("menu");
+      let elementsss = parent22.firstElementChild.nextElementSibling;
+
+      parent22.removeChild(elementsss);
+    // document.body.removeChild(parent22); it will remove the whole item
+
+
+    //clone element
+    let menu = document.getElementById("menu");
+    let cloneElm = menu.cloneNode(true);
+
+    console.log(cloneElm);
+    cloneElm.id="mobile-menue";
+
+    document.body.appendChild(cloneElm);
+
+
+    //replace element
+    let parentssss= document.getElementById("menu");
+
+    let itemss = document.createElement("li");
+    itemss.textContent="services";
+
+    // let rep =parent.firstElementChild;
+    // parentssss.replaceChild(itemss, rep);
+
+      
+
+
+    //insert adjacent html
+
+      
+      
+      
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            background-color: red;
+            color:white;
+        }
+        .color{
+            background-color: yellow;
+            color:blue;
+        }
+        .dim{
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn" >send</button>
+    <div id="box" class="color dim">
+        <p>This is a dummy text</p>
+    </div>
+
+
+    <script>
+        
+        let btn=document.getElementById("btn");
+
+        btn.setAttribute("name","form1");// this will add an name or class(depends on what you set here it is name) attribute for send button 
+
+        let val =btn.getAttribute("name");//this will show the attribute 
+
+        console.log(val);
+        
+        let val2= btn.removeAttribute("name");// this will remove attribute 
+        let val3= btn.hasAttribute("name");
+        console.log(val3);// this will show if the programm has certain attrinbute in it. THis wil give boolean value (true/false)check attribute
+
+
+        // inline style  ways of changing style 
+
+
+        // btn.style.cssText= "background-color: red; color: white";
+        // btn.setAttribute('style','color:white;background-color:red ');
+        // btn.style.color="black";
+
+
+        // normally these styles will overwrite the previously given style but if we use the symbol of concatination before equal sign ie(+=)then it will also encompasess the priyar style in it rather than overwrting and remove the previous one
+
+
+        // how to check all the prevously used style
+        let btn2 =document.getElementById("btn");
+        let css1 =getComputedStyle(btn2);
+        console.log(css1.color);
+
+
+        let box= document.getElementById("box");
+        console.log(box.className);
+        
+        // // this will add class 
+        // box.className += " dim";
+
+        console.log(box.classList);
+
+        for (let css of box.classList){
+            console.log(css);
+        }
+
+        // box.classList.add("dim"); will add the class dim
+        // box.classList.remove("dim"); will remove the class dim
+        // box.classList.replace("color","dim"); will replace the class color with dim
+        // let result = box.classList.contains("dim");
+        // console.log(result); will give boolean wheater the class is present in the css or not
+
+        // box.classList.toggle("dim"); will add class dim if not or will remove class dim if it is there
+
+
+        // width and height of element (how to know)
+        
+        let width =box.offsetWidth; // offset include the height of border and padding ( padding is included in all )
+        let height = box.offsetHeight;
+        let height1 = box.clientHeight;//will give the height but border not included
+
+        console.log(width);
+        console.log(height);
+        console.log(height1);
+
+        
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
