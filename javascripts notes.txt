@@ -113,7 +113,93 @@ insert adjacent html
 *width and height of an element 
  how to know the height and width
 
-*do
+
+
+*DOM events 
+adding event listner(single and multiple event listner) 
+
+remove event listner
+
+//page loader
+//MOUSE EVENTS
+ mouseup
+ mousedown
+ mouseover
+ mouseout
+ click
+ clickright
+
+
+//key board event (down event)
+ keydown
+ keyup
+ this will record all the keyboad event that are donwn while opning the web page
+ now you can do condional events on the pressed buttons
+
+// scroll evetn on window
+ we can detect the scroll by using 'scroll' and 'wheel'
+ scroll is used just to determine that scrolling is done
+where as wheel is used to deternmine if the scrollin is up scrolling or down scrolling 
+
+but we can use pageYOffset to measure amount of pixel scroll in 'scrol' function and can add a condition on it
+
+
+//INPUT EVENTS
+ focus when input is given
+ blur when input is deselectd
+ change when there is change in input
+ input when there is any input
+
+//EVENT BUBBLING AND EVENT CAPTURING
+
+
+
+
+
+
+
+
+
+///****BRWOSER OBJECT MODEL****////
+
+every fuction that we use direct can also be used with window.fucntion
+
+**window
+ window open and close
+
+**time out and time close
+** location object(option related url)
+***navigator object
+
+
+
+
+
+//PROJECTS???
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

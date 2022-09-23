@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>browser object model</title>
+    <style>
+        body{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">GOOGLE</button>
+    <button id="btn2">Yahoo</button>
+    <button id="btn3">close</button>
+
+
+    <button id="btn5">clear interval</button>
+
+
+    <button id="locationbtn" onclick="lofun()">redirect to google</button>
+
+
+    <script>
+        var x= "hello";
+        console.log(window.x);
+
+        function xyz(){
+            console.log("hi....");
+        }
+        window.xyz();
+
+
+        console.log(window.outerHeight);///knowing inner height and outer height
+        console.log(window.outerWidth);
+
+
+
+        let btn1 =document.getElementById("btn1");
+        let btn2 =document.getElementById("btn2");
+        let btn3 =document.getElementById("btn3");
+        let url ="https://www.google.com";
+        let features = "height= 500,wiedth=500";
+        let win;
+        btn1.addEventListener('click',function(){
+        win=window.open(url, 'google', features);
+        });
+
+        btn2.addEventListener('click',function(){
+            window.open('https://www.yahoo.com', 'google');
+        });
+        btn3.addEventListener('click', function(){
+            win.close();
+        })
+
+
+
+        //time out and time interval
+
+        let timeoutid=setTimeout(mytimeout, 5000);
+        function mytimeout(){
+            alert("please subscribe...")
+        }
+
+    
+        clearTimeout(timeoutid);
+
+
+        var t1=setInterval(fun, 2000);// it will execute after every two seconds
+
+        function fun(){
+            console.log("please subscribe agian");
+        }
+        let btn6= document.getElementById("btn5");
+
+        btn6.addEventListener('click',function(){
+           clearInterval(t1);
+        })
+
+
+
+
+        //loacation object
+
+        // console.log(location.href);  // helps to know url information
+        // console.log(location.pathname);
+        // console.log(location.protocol);
+
+        function lofun(){
+            window.location="https://www.google.com" ;//will redirect to google
+            location.href="https://www.google.com";
+
+            location.assign("https://www.google.com");
+
+            location.replace("https://www.google.com");// it will not save history so there will not be any back button
+            location.reload();
+        }
+
+
+
+        ///navigator object
+        console.log(navigator.appName);
+        console.log(navigator.appVersion);
+        console.log(navigator.appCodeName);
+        console.log(navigator.cookieEnabled);
+        console.log(navigator.userAgent);
+
+
+        //screen objects
+        console.log(screen.width);
+        console.log(screen.orientation);
+        console.log(screen.colorDepth);
+
+        
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

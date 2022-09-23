@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+
+
+        body{
+            padding: 100px;
+            background-color: cornsilk;
+        }
+        
+        #myDiv{
+            padding: 50px;
+            background-color: blue;
+        }
+    </style>
+
+
+</head>
+<body>
+    <button id="btn" onclick="btnClick()">click me<button>
+
+    <button id="btn1">click me again</button>
+    <!-- <img width ="500" src="https://www.pexels.com/photo/brown-and-green-mountain-view-photo-842711/" > -->
+
+
+
+    <div id="box" onmouseup="fun()"></div>
+
+
+    <h1>hello</h1>
+    <form action="">
+        <input type="text" id="myInput">
+    </form>
+
+
+
+    <div id="myDiv">
+        <button id="btn">click here yo</button>
+        
+    </div>
+
+    <a href="https://www.google.com" id="anchor">click me now</a>
+
+
+
+    <script>
+
+        function btnClick(){
+            console.log("button was click");
+        }
+
+        let btn1=document.getElementById("btn1");
+        btn1.addEventListener('click',btnClick);
+        // btn1.addEventListener('mouseover',function(){
+        //     console.log("mouse over is activated");
+        // })
+        // btn1.addEventListener('mouseout',function(){
+        //     console.log("mouse out is activated");
+        // })
+        function click1(){
+            console.log("click one activated");
+        }
+        function click2(){
+            console.log("click two activated");
+        }
+        // btn.addEventListener('click',click1);
+        // btn.addEventListener('click',click2);// adding multiple eventlistner on single button 
+        // btn.removeEventListener('click',click2);// this will remove event listner it can be used as a reslut of condition
+
+
+
+
+        // window.addEventListener('DOMContentLoaded',function(){
+        //     console.log('DOm tree created');
+        // });
+        // window.addEventListener('load',function(){
+        //     console.log('fully loaded');
+        // });
+        // above is for page loading fuction
+
+
+
+        //for blue box for mouse events
+        function fun(){
+            alert("click event right");
+
+        }
+
+        window.addEventListener("keydown",chekkey);
+
+        function chekkey(event){
+            console.log(event.key);
+
+        }
+
+        window.addEventListener('wheel',function(event1){
+           if(event1.deltaY<0){
+            console.log("scrolling up");
+           }
+           else if(event1.deltaY>0){
+            console.log("scrollingdown");
+           }
+        });
+
+        window.addEventListener('scroll',function(){
+            if(window.pageYOffset > 10){
+                document.body.style.background="grey";
+
+            }
+            else{
+                document.body.style.background="white"
+            }
+        });
+        // thsi will detect the amount of pixel that have been scrolled and change the color of screen or someting
+
+
+
+        //INPUT EVENTS
+        let x = document.getElementById("myInput");
+        x.addEventListener('focus',myfocusfuntion);
+        x.addEventListener('blur',myblurfuntion);
+        x.addEventListener('input',function(){
+            console.log(this.value);
+        });
+
+
+        function myblurfuntion(){
+            x.style.background="white";
+
+        }
+
+        function myfocusfuntion(){
+            x.style.background="yellow";
+
+        }
+
+
+        //EVENT BUBBLING AND EVENT CAPTURING
+
+        let d= document.getElementById("myDiv");
+        let b= document.getElementById("btn");
+      
+
+        b.addEventListener('click',btnclicked, true);
+        d.addEventListener('click',divclicked,true);
+        document.body.addEventListener('click',bodyClicked,true);
+        
+        function btnclicked(){
+            alert();
+            console.log("button checked");
+        }
+        function divclicked(event3){
+            console.log("div checked");
+            event3.stopPropagation();
+        }  
+        function bodyClicked(){
+            console.log("body checked");
+        }
+
+
+
+
+        //prevent default
+        
+        let link =document.getElementById("anchor");
+        link.addEventListener('click',function(e){
+            console.log("linkckec");
+            e.preventDefault();
+        });
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
